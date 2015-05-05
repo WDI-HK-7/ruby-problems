@@ -1,7 +1,8 @@
 #### Prime Number
 
 def PrimeNumber?(number)
-  a = 2
+  return puts false if number<2 || number%2 == 0
+  a = 3
   while a < ( (number/2) + 1 )
     return puts false if number % a === 0
     a += 1

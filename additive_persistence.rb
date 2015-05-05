@@ -7,13 +7,15 @@
 #Write a function to find the `additive persistence` of a number
 
 def additivePersistenceRecursive(number,step)
-    numString = number.to_s
     sum = 0
-    numString.each_char {|digit| sum += digit.to_i}
+    number.to_s.each_char do |digit|
+      sum += digit.to_i
+    end
     (sum < 10) ? step : additivePersistenceRecursive(sum, step+1)
 end
 
 def additivePersistence(number)
+  return 0 if number < 10
   additivePersistenceRecursive(number,1)
 end
 

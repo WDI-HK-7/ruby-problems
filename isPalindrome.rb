@@ -4,3 +4,6 @@
 def isPalindrome(string)
   string == string.reverse
 end
+
+puts "is harry palindrome? #{isPalindrome('harry')}"
+puts "is harryrrah palindrome? #{isPalindrome('harryrrah')}"
